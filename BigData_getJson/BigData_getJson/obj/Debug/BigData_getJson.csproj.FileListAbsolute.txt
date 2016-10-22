@@ -1,0 +1,9 @@
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\BigData_getJson.exe.config
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\BigData_getJson.exe
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\BigData_getJson.pdb
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\Newtonsoft.Json.dll
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\RabbitMQ.Client.dll
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug\Newtonsoft.Json.xml
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.exe
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.pdb
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.csprojResolveAssemblyReference.cache
