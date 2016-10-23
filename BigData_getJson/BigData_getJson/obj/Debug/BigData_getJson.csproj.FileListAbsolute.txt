@@ -7,3 +7,5 @@ J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\bin\Debug
 J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.exe
 J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.pdb
 J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.csprojResolveAssemblyReference.cache
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.Properties.Resources.resources
+J:\Windows7x64SSD\Projects_Studio_2015\BigData_getJson\BigData_getJson\obj\Debug\BigData_getJson.csproj.GenerateResource.Cache
