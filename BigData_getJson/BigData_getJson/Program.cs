@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.IO;
 using System.Reflection;
+using System.Threading;
 
 namespace BigData_getJson
 {
@@ -20,6 +21,7 @@ namespace BigData_getJson
             IConnection connection = commonService.GetRabbitMqConnection();
             IModel model = connection.CreateModel();
             SetupSerialisationMessageQueue(model);
+            for(;;)
             RunSerialisationDemo(model);
         }
     
@@ -43,7 +45,8 @@ namespace BigData_getJson
                
             byte[] customerBuffer = Encoding.UTF8.GetBytes(weather);
             model.BasicPublish("", CommonService.SerialisationQueueName, basicProperties, customerBuffer);
-            
+            Thread.Sleep(2000);
+
         }
         private static int GetIdCity()
         {

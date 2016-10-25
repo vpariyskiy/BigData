@@ -45,9 +45,9 @@ namespace BigData_goJsontoBD
             var client = new MongoClient(connectionString);
             var server = client.GetServer();
             server.Connect();
-            var database = server.GetDatabase("test");
+            var database = server.GetDatabase("BigData");
             var bsonDoc = BsonSerializer.Deserialize<BsonDocument>(jsontobson);
-            var collection = database.GetCollection<BsonDocument>("test_collection");
+            var collection = database.GetCollection<BsonDocument>("bigdata_collection");
 
             collection.Insert(bsonDoc);
         }
