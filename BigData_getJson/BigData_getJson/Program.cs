@@ -33,20 +33,24 @@ namespace BigData_getJson
 
         private static void RunSerialisationDemo(IModel model)
         {
-            var url = "http://api.openweathermap.org/data/2.5/weather?id=" + Convert.ToString(GetIdCity()) + "&units=metric&APPID=43bef92309c42a83f24c2a114bc3fcba";
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            var response = (HttpWebResponse)request.GetResponse();
-            var reader = new StreamReader(response.GetResponseStream());
-            var responseText = reader.ReadToEnd();
-            var weather = responseText;
+        repeat:
+            try
+            {
+                var url = "http://api.openweathermap.org/data/2.5/weather?id=" + Convert.ToString(GetIdCity()) + "&units=metric&APPID=43bef92309c42a83f24c2a114bc3fcba";
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                var response = (HttpWebResponse)request.GetResponse();
+                var reader = new StreamReader(response.GetResponseStream());
+                var responseText = reader.ReadToEnd();
+                var weather = responseText;
 
-            IBasicProperties basicProperties = model.CreateBasicProperties();
-            basicProperties.SetPersistent(true);
-               
-            byte[] customerBuffer = Encoding.UTF8.GetBytes(weather);
-            model.BasicPublish("", CommonService.SerialisationQueueName, basicProperties, customerBuffer);
-            Thread.Sleep(2000);
+                IBasicProperties basicProperties = model.CreateBasicProperties();
+                basicProperties.SetPersistent(true);
 
+                byte[] customerBuffer = Encoding.UTF8.GetBytes(weather);
+                model.BasicPublish("", CommonService.SerialisationQueueName, basicProperties, customerBuffer);
+                Thread.Sleep(4000);
+            }
+            catch (Exception ex){ goto repeat; }
         }
         private static int GetIdCity()
         {
